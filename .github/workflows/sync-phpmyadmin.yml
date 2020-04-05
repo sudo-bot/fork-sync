@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: clone cache
-              uses: actions/cache@v1
+              uses: actions/cache@v2
               with:
                   path: .cloneDir-source
                   key: cache-phpmyadmin
