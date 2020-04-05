@@ -9,6 +9,11 @@ jobs:
     sync:
         runs-on: ubuntu-latest
         steps:
+            - name: clone cache
+              uses: actions/cache@v1
+              with:
+                  path: .cloneDir-source
+                  key: cache-phpmyadmin
             - name: sync phpmyadmin fork
               uses: sudo-bot/action-fork-sync@v1.0.4
               with:
