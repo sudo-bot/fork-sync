@@ -2,7 +2,6 @@ name: sync a fork
 on:
     repository_dispatch:
         types: run-sync
-    push:
     schedule:
         - cron: "40 * * * *"
 
@@ -15,6 +14,5 @@ jobs:
               with:
                   source-url: "https://${{ secrets.BOT_TOKEN }}:x-oauth-basic@github.com/phpmyadmin/phpmyadmin.git"
                   fork-url: "https://${{ secrets.BOT_TOKEN }}:x-oauth-basic@github.com/williamdes/phpmyadmintest.git"
-                  dry-run: "true"
                   clone-depth: "100"
                   branches: "master,QA_5_0,QA_4_9,STABLE"
