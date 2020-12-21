@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: clone cache
-              uses: actions/cache@v1
+              uses: actions/cache@v2
               with:
                   path: .cloneDir-source
                   key: cache-phpmyadmin
@@ -20,4 +20,4 @@ jobs:
                   source-url: "https://${{ secrets.BOT_TOKEN }}:x-oauth-basic@github.com/phpmyadmin/phpmyadmin.git"
                   fork-url: "https://${{ secrets.BOT_TOKEN }}:x-oauth-basic@github.com/williamdes/phpmyadmintest.git"
                   clone-depth: "100"
-                  branches: "master,QA_5_0,QA_4_9,STABLE"
+                  branches: "master,QA_5_1,QA_5_0,QA_4_9,STABLE"
