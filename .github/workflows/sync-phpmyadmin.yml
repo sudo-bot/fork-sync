@@ -20,4 +20,4 @@ jobs:
                   source-url: "https://${{ secrets.BOT_TOKEN }}:x-oauth-basic@github.com/phpmyadmin/phpmyadmin.git"
                   fork-url: "https://${{ secrets.BOT_TOKEN }}:x-oauth-basic@github.com/williamdes/phpmyadmintest.git"
                   clone-depth: "1000"
-                  branches: "master,QA_5_2,QA_5_1,QA_5_0,QA_4_9,STABLE"
+                  branches: "master,QA_5_2"
